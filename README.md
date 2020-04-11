@@ -137,7 +137,35 @@ To transfer file to github we will use SSH authetication and for that we will re
 12. Enter pswd
 
 
+13. Now goto Git hub create a new reposartory 
+14. Import project from locally by giving below cmd in git bash (cmd u will find in GIt Hub for ur repo)
+	git remote add origin git@github.com:scm-ninja/git-demo.git  
 
+15 To check the files
+	git remote -v
+	The git remote command lists the names of all the remote repositories and 
+	the -v parameter (verbose) will display the full URL of the remote repository for each remote name listed
+
+16. To push the files from local rep to GH
+	git push -u remote-name branch-name
+	git push remote-name branch-name
+		The git push sends all your local changes (commits) on branch branch-name to the remote named remote-name.
+		The -u parameter is needed the first time you push a branch to the remote.
+	
+	git push -u origin master (for the first time push)
+	git push origin master	(form 2nd time)
+
+17. Now ur chngs are in ur GH repo u cn chk der.
+
+18. now if u want to make chng do them locally and commit locally.
+19. Receive Changes from Remote: Beforing pushing chng to GH first pull and merge 
+	git pull remote-name branch-name
+		The git pull receives all your remote changes (commits) from the remote named remote-name and on branch branch-name
+	
+	git pull origin master
+		
+2. After that just push ur chngs to GH
+	git push origin master
 	
 
 
