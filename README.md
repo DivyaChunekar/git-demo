@@ -28,7 +28,7 @@ Adding a file (staging ) and commiting the file in one stage
 	git commit -am "Message"
 
 Backing/Restore the chngs from stagging --- Unstage a file 
-	git restore --stagged <filename>
+	git restore --staged <filename>
 
 Backout Working Directory Changes 
 	git restore <filename>
