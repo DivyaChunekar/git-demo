@@ -15,6 +15,7 @@ try adding a file (staging ) and commiting the file in one stage
 
 git commit -am"Message"
 
+This is website for git demo
 
 ## Websites content
 
