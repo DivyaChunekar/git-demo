@@ -14,3 +14,9 @@ Adding some more lines to
 try adding a file (staging ) and commiting the file in one stage
 
 git commit -am"Message"
+
+
+## Websites content
+
+1. Index.html
+
