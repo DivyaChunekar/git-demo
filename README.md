@@ -42,6 +42,20 @@ define the environment variable GIT_PAGER to cat or set core.pager to cat by exe
 	git config --global core.pager cat
 
 
+To check or get help for git log cmd
+	git help log
+
+
+To get only the required fields in log like commit msg
+	git log --oneline --graph --decorate --color
+	
+	Git log options from above: 	
+	  --oneline Compacts log data on to one line, abbreviating the SHA1 hash 
+	  --graph Adds asterisk marks and pipes next to each commit to show the branching graph lines 
+	  --decorate Adds the markers for branch names and tags next to corresponding commits 
+	  --color Adds some color to the output 
+	  -- nice to have, depending on the operating system
+
 Removing an already commited file  from git 
 	git rm filename
 	
@@ -62,10 +76,77 @@ Removing an already commited file  from git
 		git add . 	
 			won't work we need to give
 		git add -u
+			The -u parameter will recursively update Git's staging area regarding deleted/moved files outside of Git.
 		then git status
 			git commit  -m "msg"
 
-			
+Making or crating a new directory or folder
+	mkdir foldername
+
+Moving file from one location to other 
+	git mv source_filename destination 			
+	git mv index.html web
+
+	then commit
+
+To ignoore a files to that is if we want that a file or files should not be committed whn v give git commit cmd
+we shld make their enteries in .gitignore file
+	notepad .gitignore
+		make entry of file or file type (*.log) 
+	git status
+	git add .gitignore
+	git commit -m "msg"
+
+
+To transfer file to github we will use SSH authetication and for that we will require SSH key 
+1. to set up ssh key first go to ur home directory (i.e. USER/MANI) from ur project (git-demo) by 		
+	cd ~
+2. Now check whether u hv .ssh folder by doing ls or cd .ssh , initially u wuld not hv it
+3. Thn create  .ssh folder by
+	mkdir .ssh/
+4. go to that .ssh folder
+	cd .ssh
+5. Now generate the SSH key
+	 ssh-keygen -t rsa -C "divyachunekar@gmail.com"
+	5.1 it will ask to enter the file in which u want to save key default will be fine so just enter
+	5.2 It will ask to set a pswd : 
+	5.3 Renenter pswd: 
+	5.4 Ur identification has been saved
+	5.5 ur public key has been saved
+	
+6. do ls -al
+	it will show all ur files even hidden files also
+	u will find to id_rsa & id_rsa_pub.  .pub file is the public side of the key and that is the content will be pasting into github.
+7. Copy the contents of id_rsa_pub file 
+	notepad id_rsa_pub
+	copy  the content of file -> Ctrl + A --> Ctrl + C  
+	close
+8. Goto github
+	8.1 Login
+	8.2 settings
+	8.3 SSH and GPG Keys
+	8.4 Add/New SSH key 
+		8.4.1 Give title
+		8.4.2 Paste ur copied ssh public key
+		8.4.3 Click on add key
+
+9. Come back to Git bash
+10. Try to access github from git bash by 
+	ssh -T git@github.com
+11.  Whn u do this for the first time it will ask r u sure u want to establish a connection : Say --> Yes
+12. Enter pswd
+
+
+
+	
+
+
+
+
+
+
+
+
 
 
 
