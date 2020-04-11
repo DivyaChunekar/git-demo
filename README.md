@@ -3,21 +3,35 @@
 This is my first git project.
 Trying to work locally on my project.
 
+Creating or modifying a file
+	notepad <filename>
 
-Trying to make some changes in README.md file
+Checking status of git
+	git status
 
-one
-two
-three
+Adding file to stagging
+	git add <filename>
 
-press Esc
-then :x!
+Commit staged file
+	git commit -m "Commit Msg"
+
+How to get out of git commit msg cmd when u don't give -m
+1. Enter ur commit msg
+2. Press Esc
+3. Type :x!
 
 
-Adding some more lines to 
-try adding a file (staging ) and commiting the file in one stage
+Adding multpile file together to stageing
+	git add .
 
-git commit -am"Message"
+Adding a file (staging ) and commiting the file in one stage
+	git commit -am "Message"
+
+Backing/Restore the chngs from stagging --- Unstage a file 
+	git restore --stagged <filename>
+
+Backout Working Directory Changes 
+	git restore <filename>
 
 This is website for git demo
 
