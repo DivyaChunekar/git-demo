@@ -10,4 +10,7 @@ one
 two
 three
 
+Adding some more lines to 
+try adding a file (staging ) and commiting the file in one stage
 
+git commit -am"Message"
